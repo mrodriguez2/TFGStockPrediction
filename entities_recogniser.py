@@ -8,4 +8,5 @@ string = sys.argv[1]
 analyzed_string = nlp(string)
 
 for entity in analyzed_string.ents:
-	print(entity.text, entity.label_)
+	if entity.label_ in ['NORP', 'PERSON', 'ORG', 'GPE']
+		print(entity.text, entity.label_)
